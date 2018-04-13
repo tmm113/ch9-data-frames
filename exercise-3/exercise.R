@@ -40,7 +40,8 @@ highest_exp <- us_expenditure$category[us_expenditure$X1960 == max(us_expenditur
 # returns the lowest spending category of that year
 lowest_category <- function(year){
     column <- paste0("X", year)
-    low <- us_expenditure$category[us_expenditure[, column] == min(us_expenditure[, column])]
+    low <- us_expenditure$category[us_expenditure
+                                   [, column] == min(us_expenditure[, column])]
     return(low)
 }
 
